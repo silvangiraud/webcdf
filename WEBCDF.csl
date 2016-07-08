@@ -379,41 +379,6 @@
       </if>
     </choose>
   </macro>
-  <macro name="locators-join-with-space">
-    <choose>
-      <if type="article-journal" variable="volume" match="all">
-        <choose>
-          <if match="none" variable="collection-title">
-            <text macro="locators"/>
-          </if>
-        </choose>
-      </if>
-    </choose>
-  </macro>
-  <macro name="locators-join-with-comma">
-    <choose>
-      <if type="legal_case chapter paper-conference" match="any">
-        <text macro="locators"/>
-      </if>
-      <else-if type="article-journal">
-        <choose>
-          <if variable="volume" match="none">
-            <text macro="locators"/>
-          </if>
-          <else-if match="any" variable="collection-title">
-            <text macro="locators"/>
-          </else-if>
-        </choose>
-      </else-if>
-    </choose>
-  </macro>
-  <macro name="locators-join-with-period">
-    <choose>
-      <if type="legal_case article-journal chapter paper-conference" match="none">
-        <text macro="locators"/>
-      </if>
-    </choose>
-  </macro>
   <macro name="locators">
     <choose>
       <if type="article-journal">
@@ -849,39 +814,20 @@
   <bibliography hanging-indent="true" entry-spacing="0">
     <layout suffix=".">
       <group delimiter=", ">
-        <group delimiter=", ">
-          <group delimiter=", ">
-            <group delimiter="">
-              <group delimiter=", ">
-                <group delimiter=", ">
-                  <group delimiter=", ">
-                    <group delimiter=", ">
-                      <group delimiter=", ">
-                        <text macro="contributors"/>
-                        <text macro="title"/>
-                      </group>
-                      <text macro="description"/>
-                      <text macro="secondary-contributors"/>
-                      <text macro="container"/>
-                    </group>
-                  </group>
-                </group>
-                <text macro="collection-title"/>
-                <text macro="issue-join-with-period"/>
-              </group>
-              <text macro="issue-join-with-space"/>
-            </group>
-            <text macro="issue-join-with-comma"/>
-            <text macro="extra"/>
-            <text macro="locators-join-with-period"/>
-            <text macro="locators-join-with-comma"/>
-            <text macro="locators-chapter"/>
-            <text macro="locators-join-with-space"/>
-            <text macro="locators-journal-join-with-comma"/>
-            <text macro="locators-newspaper"/>
-          </group>
-          <text macro="locators-journal-join-with-colon"/>
-        </group>
+        <text macro="contributors"/>
+        <text macro="title"/>
+        <text macro="description"/>
+        <text macro="secondary-contributors"/>
+        <text macro="container"/>
+        <text macro="collection-title"/>
+        <text macro="issue-join-with-period"/>
+        <text macro="issue-join-with-comma"/>
+        <text macro="locators"/>
+        <text macro="extra"/>
+        <text macro="locators-chapter"/>
+        <text macro="locators-journal-join-with-comma"/>
+        <text macro="locators-newspaper"/>
+        <text macro="locators-journal-join-with-colon"/>
         <text macro="access"/>
       </group>
     </layout>
