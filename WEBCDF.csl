@@ -43,10 +43,14 @@
     </date>
     <terms>
       <term name="in">dans</term>
-      <term name="cited">op. cit.</term>
+      <term name="cited">op.&#x0A0;cit.</term>
       <term name="volume" form="short">
         <single>vol.</single>
         <multiple>vol.</multiple>
+      </term>
+      <term name="issue" form="short">
+        <single>nᵒ&#x0A0;</single>
+        <multiple>nᵒˢ&#x0A0;</multiple>
       </term>
     </terms>
   </locale>
@@ -338,14 +342,14 @@
         <choose>
           <if match="none" is-numeric="collection-number">
             <group delimiter=", ">
-              <text variable="collection-title" text-case="capitalize-first" quotes="true" prefix="coll. "/>
-              <text variable="collection-number" prefix="nᵒ "/>
+              <text variable="collection-title" text-case="capitalize-first" quotes="true" prefix="coll.&#x0A0;"/>
+              <text variable="collection-number" prefix="nᵒ"/>
             </group>
           </if>
           <else>
             <group delimiter=", ">
-              <text variable="collection-title" text-case="capitalize-first" quotes="true" prefix="coll. "/>
-              <text variable="collection-number" prefix="nᵒ "/>
+              <text variable="collection-title" text-case="capitalize-first" quotes="true" prefix="coll.&#x0A0;"/>
+              <text variable="collection-number" prefix="nᵒ"/>
             </group>
           </else>
         </choose>
@@ -388,7 +392,7 @@
             <text term="volume" form="short"/>
             <number variable="volume"/>
           </group>
-          <group delimiter=" ">
+          <group delimiter="">
             <text term="issue" form="short"/>
             <number variable="issue"/>
           </group>
