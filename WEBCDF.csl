@@ -55,7 +55,7 @@
     </terms>
   </locale>
   <locale xml:lang="en-US">
-    <style-options punctuation-in-quote="false"/>
+    <style-options punctuation-in-quote="false" limit-day-ordinals-to-day-1="true"/>
     <date form="text">
       <date-part name="month" suffix=" "/>
       <date-part name="day" form="ordinal" suffix=", "/>
@@ -815,7 +815,7 @@
       </group>
     </layout>
   </citation>
-  <bibliography hanging-indent="true" entry-spacing="0">
+  <bibliography hanging-indent="true" entry-spacing="0" et-al-min="4" et-al-use-first="1">
     <layout suffix=".">
       <group delimiter=", ">
         <text macro="contributors"/>
