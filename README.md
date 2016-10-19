@@ -8,3 +8,7 @@ Le but de ce GitHub est de développer un csl pour le site web du Collège de Fr
 – suppression des small caps ;
 – ordinal spécifique pour le 1er de chaque mois (afin d’éviter une date de type « 1 septembre 2015 ») ;
 – espaces insécables automatiques avant les signes de ponctuation. Attention à ne pas en insérer dans les champs de titre pour éviter la présence d’espaces superflus.
+
+<b>Edit 2 (19/10/2016)</b>
+– intégration de l'option <limit-day-ordinals-to-day-1="true"/> dans la locale="fr" (l.38)
+– résolution du problème des dates manquantes sur certaines publications (<!--l.703-712-->)
