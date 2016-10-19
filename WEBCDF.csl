@@ -35,7 +35,7 @@
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="fr">
-    <style-options punctuation-in-quote="false"/>
+    <style-options punctuation-in-quote="false" limit-day-ordinals-to-day-1="true"/>
     <date form="text">
       <date-part name="day" form="ordinal" suffix=" "/>
       <date-part name="month" suffix=" "/>
@@ -683,7 +683,7 @@
   </macro>
   <macro name="issue-join-with-comma">
     <choose>
-      <if type="article-journal legal_case" match="none">
+      <if type="legal_case" match="none">
         <choose>
           <if type="speech" variable="publisher publisher-place" match="none">
             <text macro="issue"/>
@@ -700,7 +700,7 @@
       <if type="legal_case" match="any">
         <text macro="issued" prefix=", "/>
       </if>
-      <else-if type="article-journal">
+      <!--<else-if type="article-journal">
         <choose>
           <if variable="issue volume" match="any">
             <text macro="issued" prefix=", "/>
@@ -709,7 +709,7 @@
             <text macro="issued"/>
           </else>
         </choose>
-      </else-if>
+      </else-if>-->
       <else-if type="speech">
         <group delimiter=", ">
           <group delimiter=" ">
